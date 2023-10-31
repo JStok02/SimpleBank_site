@@ -61,7 +61,7 @@ btnScrollTo.addEventListener('click', function(e){
 document.querySelector('.nav__links').addEventListener('click', function(e){
   e.preventDefault();
   if(e.target.classList.contains('nav__link')){
-    const href = this.getAttribute('href');
+    const href = e.target.getAttribute('href');
     document.querySelector(href).scrollIntoView({behavior: 'smooth'});
   };
 });
